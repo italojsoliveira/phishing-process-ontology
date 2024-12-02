@@ -1,7 +1,6 @@
 # PAPO: A Phishing Attack Process Ontology
 
 
-
 This repository hosts PAPO, a core ontology that aims to characterizes the process of phishing attack incidents by leveraging the Unified Foundational Ontology (UFO) and OntoUML. By addressing the ambiguities and inconsistencies in existing definitions of phishing attacks, PAPO seeks to support interoperability and clarity across various applications and facilitate phishing research.
 
 

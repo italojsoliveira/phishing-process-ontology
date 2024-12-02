@@ -471,3 +471,13 @@
   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
   owl:onClass :PhishingParticipantTrustee
 ].
+:PhishingEnabler rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:someValuesFrom :PhishingPlan
+].
+:PhishingPlan rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:someValuesFrom :PhishingEnabler
+].
