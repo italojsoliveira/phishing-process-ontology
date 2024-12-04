@@ -3,6 +3,8 @@
 
 This repository hosts PAPO, a core ontology that aims to characterizes the process of phishing attack incidents by leveraging the Unified Foundational Ontology (UFO) and OntoUML. By addressing the ambiguities and inconsistencies in existing definitions of phishing attacks, PAPO seeks to support interoperability and clarity across various applications and facilitate phishing research.
 
+PAPO ontologically unpacks our characterization of the phishing attack process as a complex event wherein: (1) a phisher impersonates a reputable agent, (2) exploits the target's trust in this agent, (3) aims to trick the target into taking the attacker's desired action, (4) offering supposedly plausible reasons for this behavior.
+
 
 <!-- <p align="center">
   <img src="https://raw.githubusercontent.com/pedropaulofb/resiliont/main/resources/logos/resiliont-logo-06.png" alt="Logo" style="width:500px">
