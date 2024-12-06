@@ -4,7 +4,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>A Phishing Attack Process Ontology</title>
+    <title>Phishing Process Attack Ontology</title>
     
     <style>
       :root {
@@ -158,8 +158,8 @@
   </head>
   
   <body>
-    <h1>A Phishing Attack Process Ontology</h1>
-      <p>PAPO is a core ontology that aims to characterizes the process of phishing attack incidents by leveraging the Unified Foundational Ontology (UFO) and OntoUML. By addressing the ambiguities and inconsistencies in existing definitions of phishing attacks, PAPO seeks to support interoperability and clarity across various applications and facilitate phishing research.</p>
+    <h1>Phishing Process Attack Ontology</h1>
+      <p>PAPO is a core ontology that aims to characterizes the process of phishing attack incidents by leveraging the Unified Foundational Ontology (UFO) and OntoUML. By addressing the ambiguities and inconsistencies in existing definitions of phishing attacks, PAPO seeks to support interoperability and clarity across various applications and facilitate phishing research.  PAPO ontologically unpacks our characterization of the phishing attack process as a complex event wherein: (1) a phisher impersonates a reputable agent, (2) exploits the target&#x27;s trust in this agent, (3) aims to trick the target into taking the attacker&#x27;s desired action, (4) offering supposedly plausible reasons for this behavior.</p>
     <h2>Table of Contents</h2>
     <ol>
       <li><a href="#general_information">General Information</a></li>
@@ -209,10 +209,10 @@
     
     <div class="terms-index">
       <p>
-        <b>Classes:</b> | <a href="#Agent">Agent</a> | <a href="#Belief">Belief</a> | <a href="#Fraud">Fraud</a> | <a href="#Hook">Hook</a> | <a href="#ImpersonatedReputableAgent">ImpersonatedReputableAgent</a> | <a href="#Influence">Influence</a> | <a href="#Intention">Intention</a> | <a href="#LureMessage">LureMessage</a> | <a href="#LureMessageArrival">LureMessageArrival</a> | <a href="#LureMessageDispatch">LureMessageDispatch</a> | <a href="#MentalAttitude">MentalAttitude</a> | <a href="#Person">Person</a> | <a href="#Phisher">Phisher</a> | <a href="#PhishingAttackCapability">PhishingAttackCapability</a> | <a href="#PhishingAttackExecution">PhishingAttackExecution</a> | <a href="#PhishingAttackPlanning">PhishingAttackPlanning</a> | <a href="#PhishingAttackPreparation">PhishingAttackPreparation</a> | <a href="#PhishingAttackProcess">PhishingAttackProcess</a> | <a href="#PhishingEnabler">PhishingEnabler</a> | <a href="#PhishingParticipantTrustee">PhishingParticipantTrustee</a> | <a href="#PhishingPlan">PhishingPlan</a> | <a href="#PhishingTarget">PhishingTarget</a> | <a href="#PostAttackPhase">PostAttackPhase</a> | <a href="#TargetAnswersPhishersRequest">TargetAnswersPhishersRequest</a> | <a href="#TargetAsset">TargetAsset</a> | <a href="#TargetFragility">TargetFragility</a> | <a href="#TargetPerceivesLureMessage">TargetPerceivesLureMessage</a> | <a href="#TargetTrust">TargetTrust</a> | <a href="#TrustBasedAction">TrustBasedAction</a> | <a href="#Vulnerability">Vulnerability</a> | <a href="#VulnerabilityCondition">VulnerabilityCondition</a>
+        <b>Classes:</b> | <a href="#Agent">Agent</a> | <a href="#Belief">Belief</a> | <a href="#Fraud">Fraud</a> | <a href="#FulfillmentOfPhishersRequest">FulfillmentOfPhishersRequest</a> | <a href="#Hook">Hook</a> | <a href="#ImpersonatedReputableAgent">ImpersonatedReputableAgent</a> | <a href="#Influence">Influence</a> | <a href="#Intention">Intention</a> | <a href="#LureMessage">LureMessage</a> | <a href="#LureMessageArrival">LureMessageArrival</a> | <a href="#LureMessageDispatch">LureMessageDispatch</a> | <a href="#LureMessagePerception">LureMessagePerception</a> | <a href="#MentalAttitude">MentalAttitude</a> | <a href="#Person">Person</a> | <a href="#Phisher">Phisher</a> | <a href="#PhishingAttackCapability">PhishingAttackCapability</a> | <a href="#PhishingAttackExecution">PhishingAttackExecution</a> | <a href="#PhishingAttackPlanning">PhishingAttackPlanning</a> | <a href="#PhishingAttackPreparation">PhishingAttackPreparation</a> | <a href="#PhishingAttackProcess">PhishingAttackProcess</a> | <a href="#PhishingEnabler">PhishingEnabler</a> | <a href="#PhishingParticipantTrustee">PhishingParticipantTrustee</a> | <a href="#PhishingPlan">PhishingPlan</a> | <a href="#PhishingTarget">PhishingTarget</a> | <a href="#PostAttackPhase">PostAttackPhase</a> | <a href="#TargetAsset">TargetAsset</a> | <a href="#TargetFragility">TargetFragility</a> | <a href="#TargetTrust">TargetTrust</a> | <a href="#TrustBasedAction">TrustBasedAction</a> | <a href="#Vulnerability">Vulnerability</a>
       </p>
       <p>
-        <b>Object Properties:</b> | <a href="#aimsToEnable">aimsToEnable</a> | <a href="#catches">catches</a> | <a href="#dispatchedTo">dispatchedTo</a> | <a href="#employs">employs</a> | <a href="#impersonates">impersonates</a> | <a href="#phishingAttackExecutionHasLureMessageArrival">phishingAttackExecutionHasLureMessageArrival</a> | <a href="#phishingAttackExecutionHasLureMessageDispatch">phishingAttackExecutionHasLureMessageDispatch</a> | <a href="#phishingAttackExecutionHasTargetAnswersPhishersRequest">phishingAttackExecutionHasTargetAnswersPhishersRequest</a> | <a href="#phishingAttackExecutionHasTargetPerceivesLureMessage">phishingAttackExecutionHasTargetPerceivesLureMessage</a> | <a href="#phishingAttackProcessHasFraud">phishingAttackProcessHasFraud</a> | <a href="#phishingAttackProcessHasPhishingAttackExecution">phishingAttackProcessHasPhishingAttackExecution</a> | <a href="#phishingAttackProcessHasPhishingAttackPlanning">phishingAttackProcessHasPhishingAttackPlanning</a> | <a href="#phishingAttackProcessHasPhishingAttackPreparation">phishingAttackProcessHasPhishingAttackPreparation</a> | <a href="#phishingAttackProcessHasPostAttackPhase">phishingAttackProcessHasPostAttackPhase</a> | <a href="#selects">selects</a> | <a href="#targetTrustHasBelief">targetTrustHasBelief</a> | <a href="#targetTrustHasIntention">targetTrustHasIntention</a>
+        <b>Object Properties:</b> | <a href="#aimsToEnable">aimsToEnable</a> | <a href="#employs">employs</a> | <a href="#phishingAttackExecutionHasFulfillmentOfPhishersRequest">phishingAttackExecutionHasFulfillmentOfPhishersRequest</a> | <a href="#phishingAttackExecutionHasLureMessageArrival">phishingAttackExecutionHasLureMessageArrival</a> | <a href="#phishingAttackExecutionHasLureMessageDispatch">phishingAttackExecutionHasLureMessageDispatch</a> | <a href="#phishingAttackExecutionHasLureMessagePerception">phishingAttackExecutionHasLureMessagePerception</a> | <a href="#phishingAttackProcessHasFraud">phishingAttackProcessHasFraud</a> | <a href="#phishingAttackProcessHasPhishingAttackExecution">phishingAttackProcessHasPhishingAttackExecution</a> | <a href="#phishingAttackProcessHasPhishingAttackPlanning">phishingAttackProcessHasPhishingAttackPlanning</a> | <a href="#phishingAttackProcessHasPhishingAttackPreparation">phishingAttackProcessHasPhishingAttackPreparation</a> | <a href="#phishingAttackProcessHasPostAttackPhase">phishingAttackProcessHasPostAttackPhase</a> | <a href="#selects">selects</a> | <a href="#targetTrustHasBelief">targetTrustHasBelief</a> | <a href="#targetTrustHasIntention">targetTrustHasIntention</a>
       </p>
       <p>
         <b>Dataatype Properties:</b> | <a href="#weight">weight</a>
@@ -326,6 +326,42 @@
             </tbody>
           </table>
         </div>
+        <h3 id="FulfillmentOfPhishersRequest">FulfillmentOfPhishersRequest</h3>
+        <p>An event wherein a Target answers the Phisher&#x27;s request. The exact form of this answer depends on the type of phishing attack. So, this event can generalize at least three others: (a) Malware-based attack; (b) Target replies Phisher with requested asset; (c) Webpage-based attack.
+    
+    Fulfillment of Phisher&#x27;s Request corresponds to what is known as &quot;falling for a phishing attack&quot;.&quot;@e</p>
+        <div class="responsive-table">
+          <table>
+            <tbody>
+              <tr>
+                <th>label:</th>
+                <td>Fulfillment of Phisher&#x27;s Request&quot;@e</td>
+              </tr>
+              <tr>
+                <th>identifier:</th>
+                <td><a href="http://papo.com#FulfillmentOfPhishersRequest">http://papo.com#FulfillmentOfPhishersRequest</a></td>
+              </tr>
+              <tr>
+                <th>stereotype:</th>
+                <td>
+                  <a href="http://purl.org/nemo/gufo#EventType" target="_blank">gufo:EventType</a> 
+                </td>
+              </tr>
+              <tr>
+                <th>supertypes:</th>
+                <td>
+                  <a href="#TrustBasedAction" target="_self">:TrustBasedAction</a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> 
+                </td>
+              </tr>
+              <tr>
+                <th>in range of:</th>
+                <td>
+                  <a href="#phishingAttackExecutionHasFulfillmentOfPhishersRequest" target="_self">:phishingAttackExecutionHasFulfillmentOfPhishersRequest</a> 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <h3 id="Hook">Hook</h3>
         <p>According to Markus Jakobsson, the hook often consists of a website that emulates the appearance of a reputable agent, such as Microsoft&#x27;s login website. The goal of the hook is for victims to be directed to it via the lure message and for the victims to disclose confidential information in it.&quot;@e</p>
         <div class="responsive-table">
@@ -351,12 +387,6 @@
                   <a href="#PhishingEnabler" target="_self">:PhishingEnabler</a> <a href="#PhishingParticipantTrustee" target="_self">:PhishingParticipantTrustee</a> 
                 </td>
               </tr>
-              <tr>
-                <th>in domain of:</th>
-                <td>
-                  <a href="#catches" target="_self">:catches</a> 
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -376,19 +406,13 @@
               <tr>
                 <th>stereotype:</th>
                 <td>
-                  <a href="http://purl.org/nemo/gufo#RoleMixin" target="_blank">gufo:RoleMixin</a> 
+                  <a href="http://purl.org/nemo/gufo#Role" target="_blank">gufo:Role</a> 
                 </td>
               </tr>
               <tr>
                 <th>supertypes:</th>
                 <td>
-                  <a href="#Agent" target="_self">:Agent</a> <a href="#PhishingParticipantTrustee" target="_self">:PhishingParticipantTrustee</a> 
-                </td>
-              </tr>
-              <tr>
-                <th>in range of:</th>
-                <td>
-                  <a href="#impersonates" target="_self">:impersonates</a> 
+                  <a href="#Agent" target="_self">:Agent</a> <a href="#PhishingParticipantTrustee" target="_self">:PhishingParticipantTrustee</a> <a href="" target=""></a> 
                 </td>
               </tr>
             </tbody>
@@ -482,19 +506,13 @@
               <tr>
                 <th>stereotype:</th>
                 <td>
-                  <a href="http://purl.org/nemo/gufo#RoleMixin" target="_blank">gufo:RoleMixin</a> 
+                  <a href="http://purl.org/nemo/gufo#Category" target="_blank">gufo:Category</a> 
                 </td>
               </tr>
               <tr>
                 <th>supertypes:</th>
                 <td>
                   <a href="#PhishingParticipantTrustee" target="_self">:PhishingParticipantTrustee</a> 
-                </td>
-              </tr>
-              <tr>
-                <th>in domain of:</th>
-                <td>
-                  <a href="#dispatchedTo" target="_self">:dispatchedTo</a> 
                 </td>
               </tr>
             </tbody>
@@ -563,6 +581,40 @@
                 <th>in range of:</th>
                 <td>
                   <a href="#phishingAttackExecutionHasLureMessageDispatch" target="_self">:phishingAttackExecutionHasLureMessageDispatch</a> 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 id="LureMessagePerception">LureMessagePerception</h3>
+        <p>An event wherein a Phishing Target somehow perceives a Lure Message. For example, by reading an email.&quot;@e</p>
+        <div class="responsive-table">
+          <table>
+            <tbody>
+              <tr>
+                <th>label:</th>
+                <td>Lure Message Perception&quot;@e</td>
+              </tr>
+              <tr>
+                <th>identifier:</th>
+                <td><a href="http://papo.com#LureMessagePerception">http://papo.com#LureMessagePerception</a></td>
+              </tr>
+              <tr>
+                <th>stereotype:</th>
+                <td>
+                  <a href="http://purl.org/nemo/gufo#EventType" target="_blank">gufo:EventType</a> 
+                </td>
+              </tr>
+              <tr>
+                <th>supertypes:</th>
+                <td>
+                  <a href="http://purl.org/nemo/gufo#Event" target="_blank">gufo:Event</a> <a href="" target=""></a> 
+                </td>
+              </tr>
+              <tr>
+                <th>in range of:</th>
+                <td>
+                  <a href="#phishingAttackExecutionHasLureMessagePerception" target="_self">:phishingAttackExecutionHasLureMessagePerception</a> 
                 </td>
               </tr>
             </tbody>
@@ -660,13 +712,7 @@
               <tr>
                 <th>supertypes:</th>
                 <td>
-                  <a href="#Agent" target="_self">:Agent</a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> 
-                </td>
-              </tr>
-              <tr>
-                <th>in domain of:</th>
-                <td>
-                  <a href="#impersonates" target="_self">:impersonates</a> 
+                  <a href="#Agent" target="_self">:Agent</a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> 
                 </td>
               </tr>
             </tbody>
@@ -728,7 +774,7 @@
               <tr>
                 <th>in domain of:</th>
                 <td>
-                  <a href="#phishingAttackExecutionHasLureMessageDispatch" target="_self">:phishingAttackExecutionHasLureMessageDispatch</a> <a href="#phishingAttackExecutionHasLureMessageArrival" target="_self">:phishingAttackExecutionHasLureMessageArrival</a> <a href="#phishingAttackExecutionHasTargetPerceivesLureMessage" target="_self">:phishingAttackExecutionHasTargetPerceivesLureMessage</a> <a href="#phishingAttackExecutionHasTargetAnswersPhishersRequest" target="_self">:phishingAttackExecutionHasTargetAnswersPhishersRequest</a> 
+                  <a href="#phishingAttackExecutionHasLureMessageDispatch" target="_self">:phishingAttackExecutionHasLureMessageDispatch</a> <a href="#phishingAttackExecutionHasLureMessageArrival" target="_self">:phishingAttackExecutionHasLureMessageArrival</a> <a href="#phishingAttackExecutionHasLureMessagePerception" target="_self">:phishingAttackExecutionHasLureMessagePerception</a> <a href="#phishingAttackExecutionHasFulfillmentOfPhishersRequest" target="_self">:phishingAttackExecutionHasFulfillmentOfPhishersRequest</a> 
                 </td>
               </tr>
               <tr>
@@ -894,7 +940,7 @@
               <tr>
                 <th>stereotype:</th>
                 <td>
-                  <a href="http://purl.org/nemo/gufo#RoleMixin" target="_blank">gufo:RoleMixin</a> 
+                  <a href="http://purl.org/nemo/gufo#Category" target="_blank">gufo:Category</a> 
                 </td>
               </tr>
               <tr>
@@ -968,13 +1014,7 @@
               <tr>
                 <th>supertypes:</th>
                 <td>
-                  <a href="#Person" target="_self">:Person</a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> 
-                </td>
-              </tr>
-              <tr>
-                <th>in range of:</th>
-                <td>
-                  <a href="#dispatchedTo" target="_self">:dispatchedTo</a> 
+                  <a href="#Person" target="_self">:Person</a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> 
                 </td>
               </tr>
             </tbody>
@@ -1014,42 +1054,6 @@
             </tbody>
           </table>
         </div>
-        <h3 id="TargetAnswersPhishersRequest">TargetAnswersPhishersRequest</h3>
-        <p>An event wherein a Target answers the Phisher&#x27;s request. The exact form of this answer depends on the type of phishing attack. So, this event can generalize at least three others: (a) Malware-based attack; (b) Target replies Phisher with requested asset; (c) Webpage-based attack.
-    
-    Target Answers Phisher&#x27;s Request corresponds to what is known as &quot;falling for a phishing attack&quot;.&quot;@e</p>
-        <div class="responsive-table">
-          <table>
-            <tbody>
-              <tr>
-                <th>label:</th>
-                <td>Target Answers Phisher&#x27;s Request&quot;@e</td>
-              </tr>
-              <tr>
-                <th>identifier:</th>
-                <td><a href="http://papo.com#TargetAnswersPhishersRequest">http://papo.com#TargetAnswersPhishersRequest</a></td>
-              </tr>
-              <tr>
-                <th>stereotype:</th>
-                <td>
-                  <a href="http://purl.org/nemo/gufo#EventType" target="_blank">gufo:EventType</a> 
-                </td>
-              </tr>
-              <tr>
-                <th>supertypes:</th>
-                <td>
-                  <a href="#TrustBasedAction" target="_self">:TrustBasedAction</a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> <a href="" target=""></a> 
-                </td>
-              </tr>
-              <tr>
-                <th>in range of:</th>
-                <td>
-                  <a href="#phishingAttackExecutionHasTargetAnswersPhishersRequest" target="_self">:phishingAttackExecutionHasTargetAnswersPhishersRequest</a> 
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
         <h3 id="TargetAsset">TargetAsset</h3>
         <p>A valuable object targeted by a Phishing Plan.&quot;@e</p>
         <div class="responsive-table">
@@ -1073,12 +1077,6 @@
                 <th>supertypes:</th>
                 <td>
                   <a href="http://purl.org/nemo/gufo#FunctionalComplex" target="_blank">gufo:FunctionalComplex</a> <a href="" target=""></a> 
-                </td>
-              </tr>
-              <tr>
-                <th>in range of:</th>
-                <td>
-                  <a href="#catches" target="_self">:catches</a> 
                 </td>
               </tr>
             </tbody>
@@ -1107,40 +1105,6 @@
                 <th>supertypes:</th>
                 <td>
                   <a href="#MentalAttitude" target="_self">:MentalAttitude</a> <a href="#Vulnerability" target="_self">:Vulnerability</a> <a href="" target=""></a> 
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h3 id="TargetPerceivesLureMessage">TargetPerceivesLureMessage</h3>
-        <p>An event wherein a Phishing Target somehow perceives a Lure Message. For example, by reading an email.&quot;@e</p>
-        <div class="responsive-table">
-          <table>
-            <tbody>
-              <tr>
-                <th>label:</th>
-                <td>Target Perceives Lure Message&quot;@e</td>
-              </tr>
-              <tr>
-                <th>identifier:</th>
-                <td><a href="http://papo.com#TargetPerceivesLureMessage">http://papo.com#TargetPerceivesLureMessage</a></td>
-              </tr>
-              <tr>
-                <th>stereotype:</th>
-                <td>
-                  <a href="http://purl.org/nemo/gufo#EventType" target="_blank">gufo:EventType</a> 
-                </td>
-              </tr>
-              <tr>
-                <th>supertypes:</th>
-                <td>
-                  <a href="http://purl.org/nemo/gufo#Event" target="_blank">gufo:Event</a> <a href="" target=""></a> 
-                </td>
-              </tr>
-              <tr>
-                <th>in range of:</th>
-                <td>
-                  <a href="#phishingAttackExecutionHasTargetPerceivesLureMessage" target="_self">:phishingAttackExecutionHasTargetPerceivesLureMessage</a> 
                 </td>
               </tr>
             </tbody>
@@ -1210,7 +1174,7 @@
               <tr>
                 <th>subtypes:</th>
                 <td>
-                  <a href="#TargetAnswersPhishersRequest" target="_self">:TargetAnswersPhishersRequest</a> 
+                  <a href="#FulfillmentOfPhishersRequest" target="_self">:FulfillmentOfPhishersRequest</a> 
                 </td>
               </tr>
             </tbody>
@@ -1252,34 +1216,6 @@
             </tbody>
           </table>
         </div>
-        <h3 id="VulnerabilityCondition">VulnerabilityCondition</h3>
-        <p>It describes contexts that makes the Target fall for a phish, including the presence of Target Fragilities. For example, the situation wherein the Target is in a hurry, tired, or they lack enough cybersecurity knowledge.&quot;@e</p>
-        <div class="responsive-table">
-          <table>
-            <tbody>
-              <tr>
-                <th>label:</th>
-                <td>Vulnerability Condition&quot;@e</td>
-              </tr>
-              <tr>
-                <th>identifier:</th>
-                <td><a href="http://papo.com#VulnerabilityCondition">http://papo.com#VulnerabilityCondition</a></td>
-              </tr>
-              <tr>
-                <th>stereotype:</th>
-                <td>
-                  <a href="http://purl.org/nemo/gufo#SituationType" target="_blank">gufo:SituationType</a> 
-                </td>
-              </tr>
-              <tr>
-                <th>supertypes:</th>
-                <td>
-                  <a href="http://purl.org/nemo/gufo#Situation" target="_blank">gufo:Situation</a> <a href="" target=""></a> 
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
     </div>
     <h2 id="relations">4. Object Properties</h2>
     
@@ -1306,60 +1242,6 @@
                 <th>range:</th>
                 <td>
                   <a href="#FraudType" target="_self">:FraudType</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h3 id="catches">catches</h3>
-        <div class="responsive-table">
-          <table>
-            <tbody>
-              <tr>
-                <th>label:</th>
-                <td>catches&quot;@e</td>
-              </tr>
-              <tr>
-                <th>identifier:</th>
-                <td><a href="http://papo.com#catches">http://papo.com#catches</a></td>
-              </tr>
-              <tr>
-                <th>domain:</th>
-                <td>
-                  <a href="#Hook" target="_self">:Hook</a>
-                </td>
-              </tr>
-              <tr>
-                <th>range:</th>
-                <td>
-                  <a href="#TargetAsset" target="_self">:TargetAsset</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h3 id="dispatchedTo">dispatchedTo</h3>
-        <div class="responsive-table">
-          <table>
-            <tbody>
-              <tr>
-                <th>label:</th>
-                <td>dispatched to&quot;@e</td>
-              </tr>
-              <tr>
-                <th>identifier:</th>
-                <td><a href="http://papo.com#dispatchedTo">http://papo.com#dispatchedTo</a></td>
-              </tr>
-              <tr>
-                <th>domain:</th>
-                <td>
-                  <a href="#LureMessage" target="_self">:LureMessage</a>
-                </td>
-              </tr>
-              <tr>
-                <th>range:</th>
-                <td>
-                  <a href="#PhishingTarget" target="_self">:PhishingTarget</a>
                 </td>
               </tr>
             </tbody>
@@ -1392,28 +1274,24 @@
             </tbody>
           </table>
         </div>
-        <h3 id="impersonates">impersonates</h3>
+        <h3 id="phishingAttackExecutionHasFulfillmentOfPhishersRequest">phishingAttackExecutionHasFulfillmentOfPhishersRequest</h3>
         <div class="responsive-table">
           <table>
             <tbody>
               <tr>
-                <th>label:</th>
-                <td>impersonates&quot;@e</td>
-              </tr>
-              <tr>
                 <th>identifier:</th>
-                <td><a href="http://papo.com#impersonates">http://papo.com#impersonates</a></td>
+                <td><a href="http://papo.com#phishingAttackExecutionHasFulfillmentOfPhishersRequest">http://papo.com#phishingAttackExecutionHasFulfillmentOfPhishersRequest</a></td>
               </tr>
               <tr>
                 <th>domain:</th>
                 <td>
-                  <a href="#Phisher" target="_self">:Phisher</a>
+                  <a href="#PhishingAttackExecution" target="_self">:PhishingAttackExecution</a>
                 </td>
               </tr>
               <tr>
                 <th>range:</th>
                 <td>
-                  <a href="#ImpersonatedReputableAgent" target="_self">:ImpersonatedReputableAgent</a>
+                  <a href="#FulfillmentOfPhishersRequest" target="_self">:FulfillmentOfPhishersRequest</a>
                 </td>
               </tr>
             </tbody>
@@ -1465,13 +1343,13 @@
             </tbody>
           </table>
         </div>
-        <h3 id="phishingAttackExecutionHasTargetAnswersPhishersRequest">phishingAttackExecutionHasTargetAnswersPhishersRequest</h3>
+        <h3 id="phishingAttackExecutionHasLureMessagePerception">phishingAttackExecutionHasLureMessagePerception</h3>
         <div class="responsive-table">
           <table>
             <tbody>
               <tr>
                 <th>identifier:</th>
-                <td><a href="http://papo.com#phishingAttackExecutionHasTargetAnswersPhishersRequest">http://papo.com#phishingAttackExecutionHasTargetAnswersPhishersRequest</a></td>
+                <td><a href="http://papo.com#phishingAttackExecutionHasLureMessagePerception">http://papo.com#phishingAttackExecutionHasLureMessagePerception</a></td>
               </tr>
               <tr>
                 <th>domain:</th>
@@ -1482,30 +1360,7 @@
               <tr>
                 <th>range:</th>
                 <td>
-                  <a href="#TargetAnswersPhishersRequest" target="_self">:TargetAnswersPhishersRequest</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h3 id="phishingAttackExecutionHasTargetPerceivesLureMessage">phishingAttackExecutionHasTargetPerceivesLureMessage</h3>
-        <div class="responsive-table">
-          <table>
-            <tbody>
-              <tr>
-                <th>identifier:</th>
-                <td><a href="http://papo.com#phishingAttackExecutionHasTargetPerceivesLureMessage">http://papo.com#phishingAttackExecutionHasTargetPerceivesLureMessage</a></td>
-              </tr>
-              <tr>
-                <th>domain:</th>
-                <td>
-                  <a href="#PhishingAttackExecution" target="_self">:PhishingAttackExecution</a>
-                </td>
-              </tr>
-              <tr>
-                <th>range:</th>
-                <td>
-                  <a href="#TargetPerceivesLureMessage" target="_self">:TargetPerceivesLureMessage</a>
+                  <a href="#LureMessagePerception" target="_self">:LureMessagePerception</a>
                 </td>
               </tr>
             </tbody>

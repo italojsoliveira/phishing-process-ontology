@@ -40,7 +40,7 @@
 :Hook rdf:type owl:Class, gufo:RoleMixin, owl:NamedIndividual;
     rdfs:label "Hook"@en;
     rdfs:comment "According to Markus Jakobsson, the hook often consists of a website that emulates the appearance of a reputable agent, such as Microsoft's login website. The goal of the hook is for victims to be directed to it via the lure message and for the victims to disclose confidential information in it."@en.
-:LureMessage rdf:type owl:Class, gufo:RoleMixin, owl:NamedIndividual;
+:LureMessage rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
     rdfs:label "Lure Message"@en;
     rdfs:comment "A Message that plays the role of luring and tricking Phishing Targets to obtain Target Asset. Lure Message sends Trust Calibration Signals based on its content, such as a company logo. Examples include e-mails, SMS, direct message on social media, etc."@en.
 :Person rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
@@ -66,7 +66,7 @@
     rdfs:subClassOf gufo:Event;
     rdfs:label "Fraud"@en;
     rdfs:comment "Successful Phishing Attack Executions enable different Frauds. The latter include Extortion and Identity Theft. Fraud is a criminal event enabled by a successful Phishing Attack Execution. So, Fraud is not part of a Phishing Attack Execution but it may compose a Phishing Attack Process."@en.
-:ImpersonatedReputableAgent rdf:type owl:Class, gufo:RoleMixin, owl:NamedIndividual;
+:ImpersonatedReputableAgent rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
     rdfs:label "Impersonated Reputable Agent"@en;
     rdfs:comment "An Agent impersonated by the Phisher. It is very often a company or an organization previously trusted by the Phishing Target."@en.
 :TargetAsset rdf:type owl:Class, gufo:RoleMixin, owl:NamedIndividual;
@@ -105,17 +105,13 @@
     rdfs:subClassOf gufo:Event;
     rdfs:label "Lure Message Arrival"@en;
     rdfs:comment "An event wherein a Lure Message arrives to the Target via whatever medium is used."@en.
-:TargetPerceivesLureMessage rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+:LureMessagePerception rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
     rdfs:subClassOf gufo:Event;
-    rdfs:label "Target Perceives Lure Message"@en;
+    rdfs:label "Lure Message Perception"@en;
     rdfs:comment "An event wherein a Phishing Target somehow perceives a Lure Message. For example, by reading an email."@en.
-:TargetAnswersPhishersRequest rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
-    rdfs:label "Target Answers Phisher's Request"@en;
-    rdfs:comment "An event wherein a Target answers the Phisher's request. The exact form of this answer depends on the type of phishing attack. So, this event can generalize at least three others: (a) Malware-based attack; (b) Target replies Phisher with requested asset; (c) Webpage-based attack.\n\nTarget Answers Phisher's Request corresponds to what is known as \"falling for a phishing attack\"."@en.
-:VulnerabilityCondition rdf:type owl:Class, gufo:SituationType, owl:NamedIndividual;
-    rdfs:subClassOf gufo:Situation;
-    rdfs:label "Vulnerability Condition"@en;
-    rdfs:comment "It describes contexts that makes the Target fall for a phish, including the presence of Target Fragilities. For example, the situation wherein the Target is in a hurry, tired, or they lack enough cybersecurity knowledge."@en.
+:FulfillmentOfPhishersRequest rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:label "Fulfillment of Phisher's Request"@en;
+    rdfs:comment "An event wherein a Target answers the Phisher's request. The exact form of this answer depends on the type of phishing attack. So, this event can generalize at least three others: (a) Malware-based attack; (b) Target replies Phisher with requested asset; (c) Webpage-based attack.\n\nFulfillment of Phisher's Request corresponds to what is known as \"falling for a phishing attack\"."@en.
 :TargetFragility rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
     rdfs:label "Target Fragility"@en;
     rdfs:comment "A subtype of Vulnerability that inheres in a Phishing Target. It describes the intrinsic properties of a Target that make them fall for a phish. It includes ignorance, inexperience, prejudice or bias, conformity, intuitive judgment, low level of need for cognition, heuristics, mental shortcuts, laziness, curiosity, fear, habits, anger, excitement, tension, happiness, sadness, disgust, guilt, surprise, greed, lust, neuroticism, and many others."@en.
@@ -131,7 +127,7 @@
     rdfs:subClassOf gufo:Event;
     rdfs:label "Trust-based Action"@en;
     rdfs:comment "Events that are the manifestation of the Target Trust."@en.
-:PhishingParticipantTrustee rdf:type owl:Class, gufo:RoleMixin, owl:NamedIndividual;
+:PhishingParticipantTrustee rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
     rdfs:subClassOf gufo:FunctionalComplex;
     rdfs:label "Phishing Participant Trustee"@en;
     rdfs:comment "Phishing Participant Trustee generalizes Lure Message, Impersonated Reputable Agent, and Hook. It denotes the entities possibly trusted by the Phishing Target. A Trustee is the Agent or Object being trusted by an Agent for a given purpose, according to certain beliefs of this Agent (Trustor).\n\nAmaral, G., Sales, T.P., Guizzardi, G. and Porello, D., 2021. Ontological foundations for trust management: extending the reference ontology of trust. In CEUR workshop proceedings (Vol. 2835, pp. 12-22). Rheinisch Westfälische Technische Hochschule."@en.
@@ -142,7 +138,7 @@
 :PhishingTarget rdfs:subClassOf :Person.
 :Hook rdfs:subClassOf :PhishingEnabler.
 :TargetFragility rdfs:subClassOf :Vulnerability.
-:TargetAnswersPhishersRequest rdfs:subClassOf :TrustBasedAction.
+:FulfillmentOfPhishersRequest rdfs:subClassOf :TrustBasedAction.
 :LureMessage rdfs:subClassOf :PhishingParticipantTrustee.
 :ImpersonatedReputableAgent rdfs:subClassOf :PhishingParticipantTrustee.
 :Hook rdfs:subClassOf :PhishingParticipantTrustee.
@@ -178,36 +174,24 @@
     rdfs:domain :PhishingPlan;
     rdfs:range :MessageMediumType;
     rdfs:label "selects"@en.
-:dispatchedTo rdf:type owl:ObjectProperty;
-    rdfs:domain :LureMessage;
-    rdfs:range :PhishingTarget;
-    rdfs:label "dispatched to"@en.
-:catches rdf:type owl:ObjectProperty;
-    rdfs:domain :Hook;
-    rdfs:range :TargetAsset;
-    rdfs:label "catches"@en.
 :phishingAttackExecutionHasLureMessageDispatch rdf:type owl:ObjectProperty;
     rdfs:domain :PhishingAttackExecution;
     rdfs:range :LureMessageDispatch.
 :phishingAttackExecutionHasLureMessageArrival rdf:type owl:ObjectProperty;
     rdfs:domain :PhishingAttackExecution;
     rdfs:range :LureMessageArrival.
-:phishingAttackExecutionHasTargetPerceivesLureMessage rdf:type owl:ObjectProperty;
+:phishingAttackExecutionHasLureMessagePerception rdf:type owl:ObjectProperty;
     rdfs:domain :PhishingAttackExecution;
-    rdfs:range :TargetPerceivesLureMessage.
-:phishingAttackExecutionHasTargetAnswersPhishersRequest rdf:type owl:ObjectProperty;
+    rdfs:range :LureMessagePerception.
+:phishingAttackExecutionHasFulfillmentOfPhishersRequest rdf:type owl:ObjectProperty;
     rdfs:domain :PhishingAttackExecution;
-    rdfs:range :TargetAnswersPhishersRequest.
+    rdfs:range :FulfillmentOfPhishersRequest.
 :targetTrustHasIntention rdf:type owl:ObjectProperty;
     rdfs:domain :TargetTrust;
     rdfs:range :Intention.
 :targetTrustHasBelief rdf:type owl:ObjectProperty;
     rdfs:domain :TargetTrust;
     rdfs:range :Belief.
-:impersonates rdf:type owl:ObjectProperty;
-    rdfs:domain :Phisher;
-    rdfs:range :ImpersonatedReputableAgent;
-    rdfs:label "impersonates"@en.
 :Influence rdfs:subClassOf [
   rdf:type owl:Restriction;
   owl:onProperty gufo:mediates;
@@ -334,6 +318,11 @@
   owl:onProperty gufo:mediates;
   owl:someValuesFrom :TargetAsset
 ].
+:PhishingTarget rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:historicallyDependsOn ];
+  owl:someValuesFrom :LureMessage
+].
 :PhishingAttackProcess rdfs:subClassOf [
   rdf:type owl:Restriction;
   owl:onProperty [ owl:inverseOf gufo:participatedIn ];
@@ -367,35 +356,23 @@
   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
   owl:onClass :Phisher
 ].
-:TargetAnswersPhishersRequest rdfs:subClassOf [
-  rdf:type owl:Restriction;
-  owl:onProperty [ owl:inverseOf gufo:contributedToTrigger ];
-  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
-  owl:onClass :VulnerabilityCondition
-].
-:VulnerabilityCondition rdfs:subClassOf [
-  rdf:type owl:Restriction;
-  owl:onProperty gufo:contributedToTrigger;
-  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger;
-  owl:onClass :TargetAnswersPhishersRequest
-].
 :LureMessageArrival rdfs:subClassOf [
   rdf:type owl:Restriction;
   owl:onProperty gufo:historicallyDependsOn;
   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
   owl:onClass :LureMessageDispatch
 ].
-:TargetPerceivesLureMessage rdfs:subClassOf [
+:LureMessagePerception rdfs:subClassOf [
   rdf:type owl:Restriction;
   owl:onProperty gufo:historicallyDependsOn;
   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
   owl:onClass :LureMessageArrival
 ].
-:TargetAnswersPhishersRequest rdfs:subClassOf [
+:FulfillmentOfPhishersRequest rdfs:subClassOf [
   rdf:type owl:Restriction;
   owl:onProperty gufo:historicallyDependsOn;
   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
-  owl:onClass :TargetPerceivesLureMessage
+  owl:onClass :LureMessagePerception
 ].
 :PhishingAttackExecution rdfs:subClassOf [
   rdf:type owl:Restriction;
@@ -422,7 +399,7 @@
   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
   owl:onClass :PhishingTarget
 ].
-:TargetAnswersPhishersRequest rdfs:subClassOf [
+:FulfillmentOfPhishersRequest rdfs:subClassOf [
   rdf:type owl:Restriction;
   owl:onProperty [ owl:inverseOf gufo:manifestedIn ];
   owl:someValuesFrom :TargetFragility
@@ -445,7 +422,7 @@
   owl:onProperty gufo:participatedIn;
   owl:someValuesFrom :PhishingAttackExecution
 ].
-:TargetAnswersPhishersRequest rdfs:subClassOf [
+:FulfillmentOfPhishersRequest rdfs:subClassOf [
   rdf:type owl:Restriction;
   owl:onProperty [ owl:inverseOf gufo:participatedIn ];
   owl:someValuesFrom :TargetAsset
@@ -470,6 +447,16 @@
   owl:onProperty gufo:externallyDependsOn;
   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
   owl:onClass :PhishingParticipantTrustee
+].
+:ImpersonatedReputableAgent rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:historicallyDependsOn ];
+  owl:someValuesFrom :Phisher
+].
+:Phisher rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:historicallyDependsOn;
+  owl:someValuesFrom :ImpersonatedReputableAgent
 ].
 :PhishingEnabler rdfs:subClassOf [
   rdf:type owl:Restriction;
