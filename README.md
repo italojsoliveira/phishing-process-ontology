@@ -13,9 +13,9 @@ PAPO ontologically unpacks our characterization of the phishing attack process a
 
 <!-- The work described in this repository is presented in the academic paper [**"Ontological Foundations of Resilience"**](https://raw.githubusercontent.com/pedropaulofb/resiliont/main/resources/Ontological%20Foundations%20of%20Resilience.pdf), which can be downloaded from the link. -->
 
-Repository permanent URL: http://w3id.org/phishing-process-ontology/git
+**Repository permanent URL:** http://w3id.org/phishing-process-ontology/git
 
-Published HTML documenting PAPO OWL: [https://italojsoliveira.github.io/phishing-process-ontology/](https://italojsoliveira.github.io/phishing-process-ontology/)
+**Published HTML documenting PAPO OWL:** [https://italojsoliveira.github.io/phishing-process-ontology/](https://italojsoliveira.github.io/phishing-process-ontology/)
 
 ## Project Structure
 
