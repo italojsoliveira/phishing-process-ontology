@@ -78,6 +78,9 @@ month={October 28-31}
 
 You can download the full paper [here](https://github.com/italojsoliveira/phishing-process-ontology/blob/main/resources/_EMMSAD_2025__An_ontological_model_of_the_phishing_attack_process.pdf).
 
+> [!NOTE]
+> This paper won the _Best Paper Award_ at [EMMSAD 2025](https://www.emmsad.org/).
+
 ## How to Contribute
 
 Contributions are welcome! If you would like to contribute, you can create Pull Requests (PRs) or open issues in the repository.
