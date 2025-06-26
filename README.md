@@ -44,19 +44,26 @@ PAPO ontologically unpacks our characterization of the phishing attack process a
 
 ## How to Cite
 
-TBA
-
-<!-- If you use this work in your research, please cite it as follows: -->
+If you use this work in your research, please cite it as follows:
 
 **APA Style Citation:**
 
-TBA
+Oliveira, Í., Wagner, G., Amaral, G., Sales, T. P., Bullée, J.-W., Junger, M., Sarmah, D. K., Daneva, M., & Guizzardi, G. (2025). An Ontological Model of the Phishing Attack Process. In: Guizzardi, R., Pufahl, L., Sturm, A., van der Aa, H. (eds) Enterprise, Business-Process and Information Systems Modeling. BPMDS EMMSAD 2025 2025. Lecture Notes in Business Information Processing, vol 558. Springer, Cham. https://doi.org/10.1007/978-3-031-95397-2_17
 
 <!-- Barcelos, P. P. F., Calhau, R. F., Oliveira, Í., Sales, T. P., Gailly, F., Poels, G., & Guizzardi, G. (2024). *Ontological foundations of resilience*. In *Proceedings of the 43rd International Conference on Conceptual Modeling: Conceptual Modeling, AI, and Beyond* (ER 2024). Pittsburgh, Pennsylvania, USA, October 28-31. -->
 
 **BibTeX Citation:**
 
-TBA
+```bibtex
+@inproceedings{oliveira2025ontological,
+  title={An Ontological Model of the Phishing Attack Process},
+  author={Oliveira, {\'I}talo and Wagner, Gerd and Amaral, Glenda and Sales, Tiago Prince and Bull{\'e}e, Jan-Willem and Junger, Marianne and Sarmah, Dipti K and Daneva, Maya and Guizzardi, Giancarlo},
+  booktitle={International Conference on Business Process Modeling, Development and Support, International Conference on Evaluation and Modeling Methods for Systems Analysis and Development},
+  pages={274--289},
+  year={2025},
+  organization={Springer},
+}
+```
 
 <!-- ```bibtex
 @inproceedings{barcelos2024ontological,
@@ -73,7 +80,7 @@ month={October 28-31}
 
 ## How to Contribute
 
-Contributions are welcomed! If you would like to contribute, you can create Pull Requests (PRs) or open issues in the repository.
+Contributions are welcome! If you would like to contribute, you can create Pull Requests (PRs) or open issues in the repository.
 
 ## Authors
 
