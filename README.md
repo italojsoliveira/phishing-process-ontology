@@ -76,7 +76,7 @@ month={October 28-31}
 }
 ``` -->
 
-<!-- You can download the full paper [here](https://raw.githubusercontent.com/pedropaulofb/resiliont/main/resources/Ontological%20Foundations%20of%20Resilience.pdf). -->
+You can download the full paper [here](https://github.com/italojsoliveira/phishing-process-ontology/blob/main/resources/_EMMSAD_2025__An_ontological_model_of_the_phishing_attack_process.pdf).
 
 ## How to Contribute
 
